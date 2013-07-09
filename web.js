@@ -2,7 +2,7 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var helloMsg = fs.readFileSync("index.html").toString();
+var helloMsg = (fs.readFileSync("index.html")).toString();
 
 app.get('/', function(request, response) {
   response.send(helloMsg);
